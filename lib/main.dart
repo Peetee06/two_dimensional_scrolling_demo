@@ -36,9 +36,9 @@ class MyHomePage extends StatelessWidget {
   final String title;
 
   const MyHomePage({
-    Key? key,
+    super.key,
     required this.title,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -78,13 +78,13 @@ class TwoDimensionalGridView extends TwoDimensionalScrollView {
     super.mainAxis = Axis.vertical,
     super.verticalDetails = const ScrollableDetails.vertical(),
     super.horizontalDetails = const ScrollableDetails.horizontal(),
-    required TwoDimensionalChildBuilderDelegate delegate,
+    required TwoDimensionalChildBuilderDelegate super.delegate,
     super.cacheExtent,
     super.diagonalDragBehavior = DiagonalDragBehavior.none,
     super.dragStartBehavior = DragStartBehavior.start,
     super.keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
     super.clipBehavior = Clip.hardEdge,
-  }) : super(delegate: delegate);
+  });
 
   @override
   Widget buildViewport(
@@ -156,12 +156,12 @@ class RenderTwoDimensionalGridViewport extends RenderTwoDimensionalViewport {
     required super.horizontalAxisDirection,
     required super.verticalOffset,
     required super.verticalAxisDirection,
-    required TwoDimensionalChildBuilderDelegate delegate,
+    required TwoDimensionalChildBuilderDelegate super.delegate,
     required super.mainAxis,
     required super.childManager,
     super.cacheExtent,
     super.clipBehavior = Clip.hardEdge,
-  }) : super(delegate: delegate);
+  });
 
   @override
   void layoutChildSequence() {

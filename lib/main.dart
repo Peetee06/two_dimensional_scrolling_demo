@@ -22,10 +22,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // scrollBehavior: const MaterialScrollBehavior().copyWith(
-      //   // Mouse dragging enabled for this demo
-      //   dragDevices: PointerDeviceKind.values.toSet(),
-      // ),
+      scrollBehavior: const MaterialScrollBehavior().copyWith(
+        // Mouse dragging enabled for this demo
+        dragDevices: PointerDeviceKind.values.toSet(),
+      ),
       debugShowCheckedModeBanner: false,
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
